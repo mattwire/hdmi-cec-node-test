@@ -1,0 +1,12 @@
+[Unit]
+Description=hdmi-cec-node-test
+After=network.target
+Requires=network.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/node /opt/hdmi-cec-node-test/bin/www
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
